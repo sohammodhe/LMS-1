@@ -1,5 +1,14 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
+<%
+	HttpSession ses=request.getSession(false);
+	String empid=(String)ses.getAttribute("empid");
+	if(empid.equals("anonymousUser"))
+	{
+		response.sendRedirect("/LeaveMgt/login");
+	}
+	
+%>
 <html>
 <body>
 <h1>admin</h1>

@@ -1,5 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
+<%
+	HttpSession ses=request.getSession();
+	
+	if(ses!=null && ses.getAttribute("empid")!=null)
+	{
+		response.sendRedirect("/LeaveMgt/welcome");
+	}
+	
+%>
 <html>
 <head>
 <title>Login Page</title>
