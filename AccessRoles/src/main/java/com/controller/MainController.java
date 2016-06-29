@@ -17,7 +17,7 @@ public class MainController {
 
 	@RequestMapping(value = { "/"}, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
-
+			int i;
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security Login Form - Database Authentication");
 		model.addObject("message", "This is default page!");
